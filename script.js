@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 	// Initialize EmailJS
-	emailjs.init("uPoiLsHYpf2O5MIOH"); // Replace with your EmailJS public key
+	emailjs.init("uPoiLsHYpf2O5MIOH");
 
 	// Cursor Glow Effect
 	const cursorGlow = document.querySelector(".cursor-glow");
