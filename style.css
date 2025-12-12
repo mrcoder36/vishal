@@ -338,6 +338,9 @@ body {
 	overflow: hidden;
 	border: 1px solid var(--glass-border);
 	transition: transform 0.3s, box-shadow 0.3s;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .project-card:hover {
@@ -350,6 +353,7 @@ body {
 	width: 100%;
 	background-size: cover;
 	background-position: center;
+	position: relative;
 }
 
 .placeholder-gradient-1 {
@@ -364,8 +368,36 @@ body {
 	background: linear-gradient(45deg, #84fab0, #8fd3f4);
 }
 
+.wip-badge {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: rgba(255, 165, 0, 0.9);
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+	animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+}
+
 .project-info {
 	padding: 1.5rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .project-info h3 {
@@ -377,6 +409,7 @@ body {
 	color: var(--text-secondary);
 	font-size: 0.9rem;
 	margin-bottom: 1rem;
+	min-height: 2.7rem;
 }
 
 .tags {
@@ -397,6 +430,7 @@ body {
 .project-links {
 	display: flex;
 	gap: 1rem;
+	margin-top: auto;
 }
 
 .project-links a {
@@ -478,10 +512,143 @@ body {
 
 /* Footer */
 footer {
-	padding: 2rem;
-	text-align: center;
-	color: var(--text-secondary);
+	background: var(--bg-color);
+	padding: 4rem 10% 2rem;
+	margin-top: 5rem;
 	border-top: 1px solid var(--glass-border);
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 3rem;
+	gap: 3rem;
+}
+
+.footer-brand h3 {
+	font-size: 1.5rem;
+	max-width: 350px;
+	line-height: 1.4;
+	color: var(--text-primary);
+}
+
+.footer-brand .accent {
+	color: var(--accent-color);
+}
+
+.footer-links {
+	display: flex;
+	gap: 4rem;
+	flex: 1;
+	justify-content: flex-end;
+}
+
+.footer-column h4 {
+	color: #ff9500;
+	font-size: 1.1rem;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+}
+
+.footer-column ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.footer-column ul li a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	transition: color 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-column ul li a:hover {
+	color: var(--text-primary);
+}
+
+.footer-social li a i {
+	width: 20px;
+}
+
+.footer-cta {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.footer-btn {
+	background: var(--bg-secondary);
+	border: 1px solid var(--glass-border);
+	border-radius: 10px;
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	color: var(--text-primary);
+	transition: all 0.3s;
+	min-width: 220px;
+}
+
+.footer-btn:hover {
+	background: var(--card-hover);
+	transform: translateX(5px);
+	border-color: var(--accent-color);
+}
+
+.footer-btn div {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.footer-btn strong {
+	font-size: 1rem;
+	color: var(--text-primary);
+}
+
+.footer-btn span {
+	font-size: 0.85rem;
+	color: var(--text-secondary);
+}
+
+.footer-btn i {
+	color: #00ff00;
+	font-size: 1.2rem;
+}
+
+.footer-large-text {
+	margin: 3rem 0 2rem;
+	overflow: hidden;
+}
+
+.footer-large-text h2 {
+	font-size: clamp(4rem, 15vw, 12rem);
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.05);
+	text-transform: lowercase;
+	letter-spacing: -0.02em;
+	line-height: 0.9;
+	margin: 0;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 2rem;
+	border-top: 1px solid var(--glass-border);
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+.footer-bottom p {
+	margin: 0;
 }
 
 /* Animations */
@@ -592,6 +759,32 @@ footer {
 		grid-template-columns: 1fr;
 	}
 
+	footer {
+		padding: 3rem 5% 2rem;
+	}
+
+	.footer-content {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.footer-links {
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
+	}
+
+	.footer-btn {
+		min-width: auto;
+		width: 100%;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		gap: 1rem;
+		text-align: center;
+	}
+
 	.skills-track {
 		gap: 2rem;
 	}
@@ -641,7 +834,7 @@ footer {
 		font-size: 1.5rem;
 	}
 
-    .hero-buttons {
+	.hero-buttons {
 		justify-content: center;
 		flex-direction: row;
 		align-items: center;

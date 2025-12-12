@@ -33,7 +33,9 @@
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
-				<a href="/assets/Vishal_Resume.pdf" class="btn-primary download-cv"
+				<a
+					href="/assets/Vishal_Resume.pdf"
+					class="btn-primary download-cv"
 					>Download CV <i class="fas fa-download"></i
 				></a>
 				<div class="mobile-menu-toggle">
@@ -58,16 +60,16 @@
 						<a href="#contact" class="btn-secondary">Contact Me</a>
 					</div>
 				</div>
-                <div class="hero-visual fade-in-up delay-2">
-                    <div class="code-block">
-                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+				<div class="hero-visual fade-in-up delay-2">
+					<div class="code-block">
+						<pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
   <span class="property">name</span>: <span class="string">"Vishal Kushwaha"</span>,
   <span class="property">role</span>: <span class="string">"Full Stack Dev"</span>,
   <span class="property">skills</span>: [<span class="string">"React"</span>, <span class="string">"Java"</span>, <span class="string">"SQL"</span>],
   <span class="property">hardWorker</span>: <span class="boolean">true</span>
 };</code></pre>
-                    </div>
-                </div>
+					</div>
+				</div>
 			</section>
 
 			<section id="skills" class="skills-section">
@@ -104,35 +106,53 @@
 			</section>
 
 			<section id="projects" class="projects-section">
-				<h2 class="section-title">Featured Projects</h2>
+				<h2 class="section-title">Projects</h2>
 				<div class="projects-grid">
 					<div class="project-card">
-						<div class="project-image placeholder-gradient-1"></div>
+						<div class="project-image placeholder-gradient-2">
+							<img
+								src="assets/portfolio_1.png"
+								alt="Portfolio Website"
+								style="
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								"
+							/>
+						</div>
 						<div class="project-info">
-							<h3>E-Commerce Platform</h3>
-							<p>
-								A full-featured online store with cart and
-								payment integration.
-							</p>
+							<h3>Portfolio Website</h3>
+							<p>Personal Portfolio website</p>
 							<div class="tags">
-								<span>HTML/CSS</span>
+								<span>HTML</span>
+								<span>CSS</span>
 								<span>JavaScript</span>
-								<span>React</span>
 							</div>
 							<div class="project-links">
 								<a href="#"
 									><i class="fab fa-github"></i> Code</a
 								>
-								<a href="#"
+								<a
+									href="https://vishalkushwaha.vercel.app"
+									target="_blank"
 									><i class="fas fa-external-link-alt"></i>
 									Live</a
 								>
 							</div>
 						</div>
 					</div>
+
 					<div class="project-card">
 						<div class="project-image placeholder-gradient-2">
-							<img src="assets/todo.png" alt="Task Management App" style="width: 100%; height: 100%; object-fit: cover;">
+							<img
+								src="assets/todo.png"
+								alt="Task Management App"
+								style="
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+								"
+							/>
 						</div>
 						<div class="project-info">
 							<h3>Task Management App</h3>
@@ -149,7 +169,9 @@
 								<a href="#"
 									><i class="fab fa-github"></i> Code</a
 								>
-								<a href="https://kanban-tool-wheat.vercel.app" target="_blank"
+								<a
+									href="https://kanban-tool-wheat.vercel.app"
+									target="_blank"
 									><i class="fas fa-external-link-alt"></i>
 									Live</a
 								>
@@ -157,7 +179,9 @@
 						</div>
 					</div>
 					<div class="project-card">
-						<div class="project-image placeholder-gradient-3"></div>
+						<div class="project-image placeholder-gradient-3">
+							<div class="wip-badge">Work in Progress</div>
+						</div>
 						<div class="project-info">
 							<h3>Social Media Dashboard</h3>
 							<p>
@@ -194,11 +218,31 @@
 							best to get back to you!
 						</p>
 						<div class="social-links">
-							<a href="https://github.com/mrcoder36" target="_blank"><i class="fab fa-github"></i></a>
-							<a href="www.linkedin.com/in/thevishal07" target="_blank"><i class="fab fa-linkedin"></i></a>
-							<a href="https://x.com/thevishal____?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-							<a href="mailto:vishalkushwaha3637@gmail.com.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                            <a href="https://www.instagram.com/thevishal___?igsh=ZHVjMDdvMnhnbTB3&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a
+								href="https://github.com/mrcoder36"
+								target="_blank"
+								><i class="fab fa-github"></i
+							></a>
+							<a
+								href="https://www.linkedin.com/in/thevishal07"
+								target="_blank"
+								><i class="fab fa-linkedin"></i
+							></a>
+							<a
+								href="https://x.com/thevishal____?s=21"
+								target="_blank"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a
+								href="mailto:vishalkushwaha3637@gmail.com"
+								target="_blank"
+								><i class="fas fa-envelope"></i
+							></a>
+							<a
+								href="https://www.instagram.com/thevishal___?igsh=ZHVjMDdvMnhnbTB3&utm_source=qr"
+								target="_blank"
+								><i class="fab fa-instagram"></i
+							></a>
 						</div>
 					</div>
 					<form class="contact-form" id="contact-form">
@@ -235,10 +279,51 @@
 		</main>
 
 		<footer>
-			<p>
-				&copy; 2025 Vishal K. Built with
-				<i class="fas fa-heart"></i> and Code.
-			</p>
+			<div class="footer-content">
+				<div class="footer-brand">
+					<h3>
+						Where aesthetics &
+						<span class="accent">functionality</span> meet
+					</h3>
+				</div>
+
+				<div class="footer-links">
+					<div class="footer-column">
+						<h4>Explore</h4>
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#skills">About Me</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-column footer-cta">
+						<a href="#contact" class="footer-btn">
+							<div>
+								<strong>Contact Me</strong>
+								<span>Say Hello !</span>
+							</div>
+							<i class="fas fa-arrow-right"></i>
+						</a>
+						<a href="#projects" class="footer-btn">
+							<div>
+								<strong>My Projects</strong>
+								<span>Explore Projects</span>
+							</div>
+							<i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-large-text">
+				<h2>Vishal K.</h2>
+			</div>
+
+			<div class="footer-bottom">
+				<p>Vishal K. &copy;2025 - Privacy Policy</p>
+				<p>Pune, India</p>
+			</div>
 		</footer>
 
 		<script src="script.js"></script>
